@@ -3,7 +3,7 @@ const express = require('express')
 const server = express()
 
 server.get('/',(req,res)=> {
-    const blog = { id: 1, title: "Blog title", description: "Blog description" } 
+    const blog = { id: 1, title: "Blog title 1", description: "Blog description" } 
     res.send(blog)
 })
 
