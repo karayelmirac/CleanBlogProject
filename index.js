@@ -25,6 +25,14 @@ server.get('/',async (req,res)=> {
       posts
     });
 })
+
+server.get('/posts/:id',async (req,res)=> {
+    const post = await Post.findById(req.params.id)
+    res.render('post',{
+        post
+    })
+})
+
 server.get('/post',(req,res)=> {
     res.render('post')
 })
